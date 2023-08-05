@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import sum from '@/sum'
 
 export default function Home() {
     return (
