@@ -3,13 +3,17 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
+        "prepare": "husky install",
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint",
-        "prepare": "husky install",
-        "test": "jest",
-        "test:watch": "jest --watchAll"
+        "lint": "clear && next lint",
+        "test": "clear && jest",
+        "test:watch": "clear && jest --watchAll",
+        "test:v": "clear && jest --verbose",
+        "format": "clear && prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write",
+        "lint:fix": "clear && prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write && eslint src --ext .js,.jsx,.ts,.tsx --fix",
+        "lint:all": "clear && prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write && eslint src --ext .js,.jsx,.ts,.tsx --fix && tsc --noEmit"
     },
     "dependencies": {
         "@types/node": "20.4.8",
