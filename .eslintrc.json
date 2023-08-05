@@ -1,0 +1,44 @@
+{
+    "extends": [
+        "next/core-web-vitals",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended",
+        "airbnb",
+        "prettier",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": ["prettier", "react"],
+    "ignorePatterns": ["*.ttf", "*.css"],
+    "rules": {
+        "@next/next/no-img-element": "off",
+        "import/no-extraneous-dependencies": "off",
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-no-useless-fragment": "off",
+        "no-undef": "off",
+        "import/extensions": "off",
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "no-console": "off",
+        "react/jsx-no-bind": "off",
+        "react/prop-types": "off",
+        "no-use-before-define": ["error", { "functions": false }],
+        "react/jsx-filename-extension": "off",
+        "prettier/prettier": ["error"],
+        "jsx-a11y/label-has-associated-control": [
+            2,
+            {
+                "controlComponents": [
+                    "InputSelect",
+                    "SectionTitle",
+                    "InputTitle",
+                    "InputText"
+                ],
+                "depth": 3
+            }
+        ]
+    }
+}
