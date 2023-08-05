@@ -9,6 +9,7 @@
         "start": "next start",
         "lint": "clear && next lint",
         "test": "clear && jest",
+        "test:noClear": "jest",
         "test:watch": "clear && jest --watchAll",
         "test:v": "clear && jest --verbose",
         "format": "clear && prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write",
