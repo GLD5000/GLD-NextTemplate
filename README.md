@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project with:
+# This is a [Next.js](https://nextjs.org/) project with:
 
 1. [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) for type safety
 2. [Tailwind CSS](https://tailwindcss.com/docs/installation) for styling
