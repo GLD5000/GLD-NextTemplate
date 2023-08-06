@@ -9,13 +9,13 @@
 
 ## If you like this, checkout my other projects on [GitHub](https://github.com/GLD5000) or via my [Portfolio](https://gld-portfolio.vercel.app/)
 
-## How I made this (also read on [my blog](https://gld-dev-blog.vercel.app/blogpost/clky99brt0000mi0851uxf2dm) or [dev.to]()):
+## How I made this (also read on [my blog](https://gld-dev-blog.vercel.app/blogpost/clky99brt0000mi0851uxf2dm) or [dev.to](https://dev.to/gld5000)):
 
 # Getting Started with Next 13.4
 
 ## How I set up a project
 
-> #### TLDR: This setup is available as a template in my GitHub Account here if you want the quickest path to the end result or want to see the setup in context- [GLD-NextTemplate](https://github.com/GLD5000/GLD-NextTemplate)
+> #### TLDR: This setup is available as a template in my [GitHub Account](https://github.com/GLD5000) if you want the quickest path to the end result or want to see the setup in context- [GLD-NextTemplate](https://github.com/GLD5000/GLD-NextTemplate)
 
 ## Installation and Repo setup
 
@@ -63,10 +63,10 @@ import '@testing-library/jest-dom/extend-expect';
 4. Add scripts to package.json:
 
 ```
-package.json
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test": "clear && jest",
+    "test:noClear": "jest",
+    "test:watch": "clear && jest --watchAll",
   }
 ```
 
@@ -82,7 +82,7 @@ export default {
     tabWidth: 4,
     semi: false,
     singleQuote: true,
-  };
+};
 ```
 
 4. Setup eslint: `npm init @eslint/config`
@@ -90,14 +90,14 @@ export default {
 6. Get peer dependency list for AirBnb config: list peer dependencies `npm info "eslint-config-airbnb@latest"` e.g.:
 
 ```
-eslint: '^7.32.0 || ^8.2.0',
+   eslint: '^7.32.0 || ^8.2.0',
   'eslint-plugin-import': '^2.25.3',
   'eslint-plugin-jsx-a11y': '^6.5.1',
   'eslint-plugin-react': '^7.28.0',
   'eslint-plugin-react-hooks': '^4.3.0'
 ```
 
-7. Paste into package.json devDependencies and watch for conflicts (duplicates).
+7. Paste into package.json devDependencies and watch for conflicts (duplicates) you will not need `eslint` if it is already installed with Next.js.
 8. Run npm install to install the extra dependencies: `npm i`
 9. Install Eslint typescript: `npm i -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-airbnb-typescript`
 10. Install testing plugins: `npm i -D eslint-plugin-jest-dom eslint-plugin-testing-library`
@@ -178,7 +178,16 @@ module.exports = {
 }
 ```
 
-7. Add optional testing hook: `npx husky add .husky/pre-commit "npm run test"`
+7. Add optional testing hook e.g.: `npx husky add .husky/pre-commit "npm run test:noClear"` so your pre-commit file could look something like this:
+
+```
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run test:noClear
+npx lint-staged
+
+```
 
 ## Setup Additional Scripts
 
@@ -187,9 +196,14 @@ Package.json:
 ```
     "lint": "clear && next lint",
     "test": "clear && jest",
+    "test:noClear": "jest",
     "test:watch": "clear && jest --watchAll",
     "test:v": "clear && jest --verbose",
     "format": "clear && prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write",
     "lint:fix": "clear && prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write && eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "lint:all": "clear && prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write && eslint src --ext .js,.jsx,.ts,.tsx --fix && tsc --noEmit"
 ```
+
+## That's It!
+
+Not exactly a short process but this will give a really useful base to build quality code with. Don't forget to like / star if you found this useful! If you like, you can also checkout my other [projects](https://github.com/GLD5000) and [blogs](https://dev.to/gld5000).
