@@ -7,7 +7,9 @@
 5. [Prettier](https://prettier.io/docs/en/install.html) for formatting
 6. [Husky](https://typicode.github.io/husky/getting-started.html) & [Lint-Staged](https://github.com/okonet/lint-staged) for pre-commit testing and linting
 
-## How I made this ([also read on my blog](https://gld-dev-blog.vercel.app/blogpost/clky99brt0000mi0851uxf2dm)):
+## If you like this, checkout my other projects on [GitHub](https://github.com/GLD5000) or via my [Portfolio](https://gld-portfolio.vercel.app/)
+
+## How I made this (also read on [my blog](https://gld-dev-blog.vercel.app/blogpost/clky99brt0000mi0851uxf2dm) or [dev.to]()):
 
 # Getting Started with Next 13.4
 
