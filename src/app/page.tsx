@@ -34,7 +34,7 @@ export default function Home() {
             </a>
             <a
                 className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-                href="https://gld-portfolio.vercel.app/"
+                href="https://github.com/GLD5000"
                 target="_blank"
                 rel="noopener noreferrer"
             >
