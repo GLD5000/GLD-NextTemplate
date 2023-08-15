@@ -77,7 +77,102 @@ import '@testing-library/jest-dom/extend-expect';
 
 1. Install latest Cypress: `npm i -D cypress@latest` (currently "cypress": "^12.17.3" at time of writing)
 
-2. Open Cypress from CLI: `npx cypress open`
+2. Start a dev server in a terminal: `npm run dev`
+
+3. Open Cypress from a second terminal: `npx cypress open`
+
+4. Once open, click 'E2E Testing' button to configure and then click 'continue' (if you get an error relating to 'bundle' you may need to switch tsconfig.json `"moduleResolution": "bundler",` to `"moduleResolution": "node",`), when prompted for a browser choose e.g. Chrome and click to add scaffolded examples if you like.
+
+5. Setup new config files **within the 'cypress' folder**:
+
+### cypress/eslintrc.json with disabled rules to accommodate cypress example specs:
+
+```
+{
+    "plugins": ["cypress"],
+    "extends": ["plugin:cypress/recommended"],
+    "rules": {
+        "testing-library/await-async-utils": "off",
+        "no-unused-expressions": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "cypress/unsafe-to-chain-command": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "func-names": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "global-require": "off",
+        "testing-library/no-debugging-utils": "off",
+        "no-param-reassign": "off"
+    },
+    "overrides": [
+        {
+            "files": ["viewport.cy.js", "waiting.cy.js"],
+            "rules": {
+                "cypress/no-unnecessary-waiting": "off"
+            }
+        }
+    ]
+}
+
+
+```
+
+### cypress/tsconfig.json:
+
+```
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["es5", "dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+    "exclude": ["node_modules"]
+}
+
+```
+
+6. Update exclude and include in root tsconfig.json:
+
+```
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","cypress/tsconfig.json"],
+    "exclude": ["node_modules", "./cypress.config.ts","cypress"]
+```
+
+7. Put an eslint disable comment in the cypress.config.ts:
+
+```
+/* eslint-disable */
+import { defineConfig } from "cypress";
+
+export default defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+  },
+});
+
+```
 
 ## Setup Linting
 
@@ -215,4 +310,4 @@ Package.json:
 
 ## That's It!
 
-Not exactly a short process but this will give a really useful base to build quality code with. Don't forget to like / star if you found this useful! If you like, you can also checkout my other [projects](https://github.com/GLD5000) and [blogs](https://dev.to/gld5000).
+Not exactly a short process but this will give a really useful base to build quality code with. Don't forget to like / star if you found this useful! If you like, you can also check out my other [projects](https://github.com/GLD5000) and [blogs](https://dev.to/gld5000).
