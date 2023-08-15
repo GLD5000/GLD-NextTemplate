@@ -14,7 +14,10 @@ export default function Home() {
                 <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none" />
             </div>
 
-            <h1 className="w-fit mx-auto text-5xl font-bold text-center">
+            <h1
+                data-testid="hero-heading"
+                className="w-fit mx-auto text-5xl font-bold text-center"
+            >
                 Minimal Starter Template for
             </h1>
             <a

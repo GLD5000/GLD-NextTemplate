@@ -15,7 +15,8 @@
         "format": "clear && prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write",
         "lint:fix": "clear && prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write && eslint src --ext .js,.jsx,.ts,.tsx --fix",
         "lint:all": "clear && prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write && eslint src --ext .js,.jsx,.ts,.tsx --fix && tsc --noEmit",
-        "lint:staged": "git add . && npx lint-staged && git add ."
+        "lint:staged": "git add . && npx lint-staged && git add .",
+        "cypress": "npx cypress open"
     },
     "dependencies": {
         "@types/node": "20.4.8",

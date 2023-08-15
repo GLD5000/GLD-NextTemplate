@@ -73,6 +73,28 @@ import '@testing-library/jest-dom/extend-expect';
   }
 ```
 
+5. Add first test in \_\_tests\_\_/home.test.tsx:
+
+```
+import React from 'react';
+import { render } from '@testing-library/react';
+import Home from '@/app/page';
+
+describe('Home component', () => {
+  it('renders correctly', () => {
+    render(<Home />);
+
+    const heroHeading = screen.getByTestId('hero-heading');
+    expect(heroHeading).toBeInTheDocument();
+
+    const madeByText = screen.getByText(/Made by GLD5000/i);
+    expect(madeByText).toBeInTheDocument();
+
+  });
+});
+
+```
+
 ### Cypress
 
 1. Install latest Cypress: `npm i -D cypress@latest` (currently "cypress": "^12.17.3" at time of writing)
@@ -170,6 +192,38 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
+});
+
+```
+
+8. Add script to package.json:
+
+```
+  "scripts": {
+    ...
+   "cypress": "npx cypress open"
+  }
+```
+
+9. Add first test:
+
+-   Add `data-testid` attribute to H1 on app/page.tsx:
+
+```
+    <h1 data-testid="hero-heading" className="w-fit mx-auto text-5xl font-bold text-center">
+                Minimal Starter Template for
+            </h1>
+
+```
+
+-   Add test in cypress/e2e/home.cy.ts:
+
+```
+describe("template spec", () => {
+  it("H1 contains correct text", () => {
+    cy.visit("http://localhost:3000/");
+    cy.get("[data-testid='hero-heading']").contains("Minimal Starter Template for");
+  });
 });
 
 ```
