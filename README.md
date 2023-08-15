@@ -1,4 +1,8 @@
-# This is a [Next.js](https://nextjs.org/) project with:
+# Getting Started with Next 13.4
+
+## How I set up a project
+
+# This is a step-by-step guide to make a [Next.js](https://nextjs.org/) project with:
 
 1. [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) for type safety
 2. [Tailwind CSS](https://tailwindcss.com/docs/installation) for styling
@@ -10,11 +14,7 @@
 
 ## If you like this, checkout my other projects on [GitHub](https://github.com/GLD5000) or via my [Portfolio](https://gld-portfolio.vercel.app/)
 
-## How I made this (also read on [my blog](https://gld-dev-blog.vercel.app/blogpost/clky99brt0000mi0851uxf2dm) or [dev.to](https://dev.to/gld5000)):
-
-# Getting Started with Next 13.4
-
-## How I set up a project
+## You can also read this guide on [my blog](https://gld-dev-blog.vercel.app/blogpost/clky99brt0000mi0851uxf2dm) or [dev.to](https://dev.to/gld5000):
 
 > #### TLDR: This setup is available as a template in my [GitHub Account](https://github.com/GLD5000) if you want the quickest path to the end result or want to see the setup in context- [GLD-NextTemplate](https://github.com/GLD5000/GLD-NextTemplate)
 
