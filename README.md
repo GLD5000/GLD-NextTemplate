@@ -75,6 +75,10 @@ import '@testing-library/jest-dom/extend-expect';
 
 ### Cypress
 
+1. Install latest Cypress: `npm i -D cypress@latest` (currently "cypress": "^12.17.3" at time of writing)
+
+2. Open Cypress from CLI: `npx cypress open`
+
 ## Setup Linting
 
 1. Install prettier: npm i -D prettier eslint-plugin-prettier eslint-config-prettier
