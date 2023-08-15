@@ -1,0 +1,25 @@
+{
+    "plugins": ["cypress"],
+    "extends": ["plugin:cypress/recommended"],
+    "rules": {
+        "testing-library/await-async-utils": "off",
+        "no-unused-expressions": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "cypress/unsafe-to-chain-command": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "func-names": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "global-require": "off",
+        "testing-library/no-debugging-utils": "off",
+        "no-param-reassign": "off"
+    },
+    "overrides": [
+        {
+            "files": ["viewport.cy.js", "waiting.cy.js"],
+            "rules": {
+                "cypress/no-unnecessary-waiting": "off"
+            }
+        }
+    ]
+}
