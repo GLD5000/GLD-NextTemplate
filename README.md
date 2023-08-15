@@ -60,7 +60,13 @@ export default createJestConfig(config);
 3. Add jest.setup.js:
 
 ```
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom/extend-expect'
+import React from 'react'
+
+function MockImage(props) {
+    return React.createElement('img', props)
+}
+jest.mock('next/image', () => MockImage)
 ```
 
 4. Add scripts to package.json:
