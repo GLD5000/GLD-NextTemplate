@@ -51,7 +51,7 @@ export default function Home() {
             />
 
             <div className="grid gap-4">
-                <h1 className="w-fit mx-auto text-5xl font-bold">Including:</h1>
+                <h2 className="w-fit mx-auto text-5xl font-bold">Including:</h2>
 
                 <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
                     <LinkButton
