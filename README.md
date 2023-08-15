@@ -73,7 +73,7 @@ import '@testing-library/jest-dom/extend-expect';
   }
 ```
 
-5. Add first test in \_\_tests\_\_/home.test.tsx:
+5. Add first test in `\_\_tests\_\_/home.test.tsx`:
 
 ```
 import React from 'react';

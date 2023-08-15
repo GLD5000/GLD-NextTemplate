@@ -41,7 +41,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <h2 className="w-fit mx-auto text-3xl font-bold text-center">
+                <h2 className="w-fit mx-auto text-3xl font-bold text-center hover:transition hover:underline-offset-4 hover:underline">
                     Made by GLD5000
                 </h2>
             </a>
@@ -65,6 +65,10 @@ export default function Home() {
                     <LinkButton
                         link="https://jestjs.io/docs/getting-started"
                         text="Jest"
+                    />{' '}
+                    <LinkButton
+                        link="https://docs.cypress.io/guides/getting-started/installing-cypress"
+                        text="Cypress"
                     />
                     <LinkButton
                         link="https://eslint.org/docs/latest/use/getting-started"
