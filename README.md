@@ -2,10 +2,11 @@
 
 1. [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) for type safety
 2. [Tailwind CSS](https://tailwindcss.com/docs/installation) for styling
-3. [Jest](https://jestjs.io/docs/getting-started) for testing
-4. [ESLint](https://eslint.org/docs/latest/use/getting-started) for linting
-5. [Prettier](https://prettier.io/docs/en/install.html) for formatting
-6. [Husky](https://typicode.github.io/husky/getting-started.html) & [Lint-Staged](https://github.com/okonet/lint-staged) for pre-commit testing and linting
+3. [Jest](https://jestjs.io/docs/getting-started) for testing components etc.
+4. [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) for end to end testing etc.
+5. [ESLint](https://eslint.org/docs/latest/use/getting-started) for linting
+6. [Prettier](https://prettier.io/docs/en/install.html) for formatting
+7. [Husky](https://typicode.github.io/husky/getting-started.html) & [Lint-Staged](https://github.com/okonet/lint-staged) for pre-commit testing and linting
 
 ## If you like this, checkout my other projects on [GitHub](https://github.com/GLD5000) or via my [Portfolio](https://gld-portfolio.vercel.app/)
 
@@ -28,6 +29,8 @@
 7. `git push -u origin main`
 
 ## Setup Testing
+
+### Jest
 
 1. Install Jest, ts-jest, jsdom, testing libraries & eslint plugins: `npm i -D jest ts-jest jest-environment-jsdom @testing-library/jest-dom @testing-library/react eslint-plugin-jest-dom eslint-plugin-testing-library`
 2. Add jest.config.mjs
@@ -69,6 +72,8 @@ import '@testing-library/jest-dom/extend-expect';
     "test:watch": "clear && jest --watchAll",
   }
 ```
+
+### Cypress
 
 ## Setup Linting
 
